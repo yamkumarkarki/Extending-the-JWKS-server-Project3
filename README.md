@@ -1,37 +1,79 @@
-# JWKS Server Project 3
+# 🔐 Extending the JWKS Server – Project 3
 
-## Overview
+A secure JSON Web Key Set (JWKS) authentication server built with **Python**, **Flask**, and **SQLite**.  
+This project extends a basic JWKS server by adding encryption, user management, logging, and rate limiting.
 
-This project enhances a JWKS authentication server with improved security and user management features.
+> Developed as part of **CSCE3550 – Foundations of Cybersecurity**
 
-The server supports RSA key generation, JWT authentication, JWKS key publishing, user registration, AES encryption of private keys, authentication request logging, and rate limiting.
+---
 
-## Features
+# 📌 Project Overview
 
-- RSA private/public key generation
-- JWKS endpoint
-- JWT authentication endpoint
-- AES encrypted private keys in SQLite
-- User registration endpoint
-- Secure password generation using UUIDv4
-- Argon2 password hashing
-- Authentication request logging
-- Time-window rate limiting for `/auth`
+This server provides secure JWT-based authentication and publishes public keys through a JWKS endpoint.
 
-## Requirements
+The project improves security by:
 
-- Python 3
-- Flask
-- PyJWT
-- Cryptography
-- Argon2-CFFI
-- Pytest
-- Pytest-Cov
+- Encrypting private keys before storing them in the database
+- Adding user registration
+- Hashing passwords using Argon2
+- Logging authentication activity
+- Preventing abuse with rate limiting
 
-## Installation
+---
 
-Create and activate a virtual environment:
+# 🚀 Features
 
-```bash
-python3 -m venv venv
-source venv/bin/activate
+### 🔑 Authentication & Keys
+- RSA key pair generation  
+- JWT token creation using RS256  
+- JWKS public key publishing endpoint  
+
+### 🔒 Security Enhancements
+- AES-encrypted private keys in SQLite  
+- Environment-variable secret management (`NOT_MY_KEY`)  
+- Argon2 password hashing  
+
+### 👤 User Management
+- User registration endpoint  
+- UUIDv4 secure password generation  
+
+### 📊 Monitoring
+- Authentication request logging  
+- IP tracking and timestamps  
+
+### ⚡ Protection
+- Rate limiting (`10 requests / second`) on `/auth`
+
+---
+
+# 🛠️ Tech Stack
+
+| Category | Technology |
+|--------|------------|
+| Language | Python |
+| Framework | Flask |
+| Database | SQLite |
+| Auth | JWT (PyJWT) |
+| Encryption | AES / Fernet |
+| Password Hashing | Argon2 |
+| Testing | Pytest |
+
+---
+
+# 📂 Project Structure
+
+```text
+Extending-the-JWKS-server-Project3/
+├── app.py
+├── requirements.txt
+├── README.md
+├── test_app.py
+├── screenshots/
+│   ├── gradebot-result.png
+│   └── coverage-result.png
+└── .gitignore
+
+Results
+<img width="744" height="165" alt="test-coverage" src="https://github.com/user-attachments/assets/d09746c5-518c-4c05-aa9b-9404e9b71819" />
+<img width="847" height="447" alt="gradebot-result" src="https://github.com/user-attachments/assets/3cba264a-837d-4bf6-8e2a-827b0aa5967c" />
+
