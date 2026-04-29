@@ -73,7 +73,8 @@ Extending-the-JWKS-server-Project3/
 │   └── coverage-result.png
 └── .gitignore
 
-Results
-<img width="744" height="165" alt="test-coverage" src="https://github.com/user-attachments/assets/d09746c5-518c-4c05-aa9b-9404e9b71819" />
-<img width="847" height="447" alt="gradebot-result" src="https://github.com/user-attachments/assets/3cba264a-837d-4bf6-8e2a-827b0aa5967c" />
+### Gradebot Result
+<img width="744" height="165" alt="test-coverage" src="https://github.com/user-attachments/assets/89f9a4b5-bd9a-4fa9-bcdd-2804dd514d39" />
+<img width="847" height="447" alt="gradebot-result" src="https://github.com/user-attachments/assets/2ac0c5cd-86a2-4ead-96cd-595fd0c07017" />
+
 
